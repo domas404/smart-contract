@@ -1,0 +1,228 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    color: white;
+    background-color: #518550;
+}
+.center-align{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 80%;
+    height: 100%;
+    min-width: 80px;
+    background-color: #518550;
+}
+.balance-info{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 3vh;
+    margin-left: 3vh;
+    /* background-color: brown; */
+    padding: 15px;
+    font-size: 200%;
+    /* border-radius: 15px; */
+}
+.account-balance{
+    display: inline-block;
+    font-size: 120%;
+}
+.eth{
+    font-size: 100%;
+    display: inline-block;
+}
+.your-bal{
+    font-size: 70%;
+}
+
+.side{
+    width: 12%;
+    height: auto;
+    position: absolute;
+    top: 25vh;
+    margin-left: 3vh;
+}
+#side-nav{
+    width: 12%;
+    height: auto;
+    position: absolute;
+    top: 25vh;
+    margin-left: 3vh;
+    background-color: #92BD91;
+    padding: 15px;
+    border-radius: 15px;
+    max-height: 200px;
+    overflow: auto;
+}
+.prop-status{
+    background-color: #92BD91;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 15px;
+    max-height: 200px;
+    overflow: auto;
+}
+/* #new-p{
+    top: 35vh;
+}
+#closed{
+    top: 45vh;
+} */
+.proposal-content-container{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 25vh;
+    margin-left: 20%;
+    background-color: #92BD91;
+    padding: 15px;
+    border-radius: 15px;
+}
+#new-proposal-content{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 25vh;
+    margin-left: 20%;
+    background-color: #92BD91;
+    padding: 15px;
+    border-radius: 15px;
+    visibility: hidden;
+}
+.proposal-label{
+    margin: 5px;
+    font-weight: bold;
+    font-size: 120%;
+}
+form{
+    padding: 10px 20px;
+}
+label{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    color: #264926;
+}
+.unit{
+    color: #264926;
+}
+input[type=number]{
+    width: 100px;
+    padding: 8px 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 100%;
+}
+input[type=url]{
+    width: 300px;
+    padding: 8px 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 100%;
+}
+#submit{
+    float: right;
+    margin: 0 40px 20px 0;
+}
+.button-style{
+    height: 50px;
+    width: 130px;
+    border: none;
+    color: white;
+    background-color: #264926;
+    margin: 0 auto;
+    font-size: 100%;
+    border-radius: 20px;
+}
+.button-style:hover{
+    cursor: pointer;
+    background-color: #427442;
+}
+.button-style:active{
+    background-color: #3b683b;
+}
+#add-proposal{
+    position: absolute;
+    top: 5%;
+    right: 12%;
+}
+.props{
+    padding: 10px 0 0 5px;
+}
+
+.image-container{
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    display: inline-block;
+    float: left;
+}
+.image-info{
+    display: inline-block;
+    height: 300px;
+    margin: 10px;
+}
+.info{
+    margin: 5px;
+    font-size: 120%;
+    color: #264926;
+}
+#decline, #decline-prop{
+    position: absolute;
+    bottom: 25px;
+    right: 200px;
+}
+#sell, #accept-prop{
+    position: absolute;
+    bottom: 25px;
+    right: 40px;
+}
+#existing-proposal{
+    visibility: hidden;
+}
+.prop-list{
+    background-color: #264926;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.prop-list:hover{
+    cursor: pointer;
+    background-color: #427442;
+}
+.prop-list:active{
+    background-color: #3b683b;
+}
+#ownerUI{
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+}
+#value-form{
+    display: inline-block;
+    margin: 0;
+}
+#container{
+    /* visibility: hidden; */
+}
+.changeUI{
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+}
+#owner{
+    right: 200px;
+}
+#owner-container{
+    visibility: hidden;
+}

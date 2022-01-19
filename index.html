@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="uft-8" />
+        <title>Collect</title>
+        <link href="style.css" rel="stylesheet" />
+        <script type="text/javascript" src="node_modules/web3/dist/web3.min.js"></script>
+        <script type="text/javascript" src="contract_abi.js"></script>
+
+        <!-- <script src="app.js" type="text/javascript" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="node_modules/web3/lib/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+        <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.2/ethers.umd.min.js" integrity="sha512-PtOcu3WZTldHT+VjAJdWV5ss+iGebEgc1h5olJuxUNPvKuC0VOZsk1UhNgQYi5oIyrNHhdIOw8WQMdZwBv1MyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    </head>
+    <body>
+        <div id="container" class="center-align">
+            <div class="box">
+                <div class="balance-info">
+                    <div id="account-balance" class="account-balance"></div>
+                    <div class="eth">ETH</div>
+                    <div class="your-bal">YOUR BALANCE</div>
+                </div>
+
+                <button id="add-proposal" class="button-style">
+                    New proposal
+                </button>
+
+                <div id="side-nav" class="side-nav">
+                    <div>MY PROPOSALS:</div>
+                </div>
+
+                <div id="new-proposal-content" class="proposal-content-container">
+                    <div class="proposal-label">NEW PROPOSAL #n</div>
+                    <form id="proposal-form">
+                        <label for="url">URL:</label>
+                        <input type="url" id="url" /><br />
+
+                        <label for="size">SIZE:</label>
+                        <input type="number" id="size" />
+                        <span class="unit">KB</span><br />
+
+                        <label for="height">HEIGHT:</label>
+                        <input type="number" id="height" />
+                        <span class="unit">PX</span><br />
+
+                        <label for="width">WIDTH:</label>
+                        <input type="number" id="width" />
+                        <span class="unit">PX</span>
+                    </form>
+                    <button id="submit" class="button-style">Submit</button>
+                    <!-- <button onclick="connect()">Connect</button> -->
+                </div>
+
+                <div id="existing-proposal" class="proposal-content-container">
+                    <div id="image-container" class="image-container"></div>
+                    <div class="image-info">
+                        <div class="proposal-label" class="info">PROPOSAL #n</div>
+                        <div class="info">SIZE: <span id="set-size"></span> KB</div>
+                        <div class="info">HEIGHT: <span id="set-height"></span> PX</div>
+                        <div class="info">WIDTH: <span id="set-width"></span> PX</div><br />
+                        <div class="info">VALUED AT: <span id="set-value"></span> ETH</div>
+                        <button id="decline" class="button-style">Decline</button>
+                        <button id="sell" class="button-style">Sell</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ownerUI" class="center-align">
+            <div class="box">
+                <div class="balance-info">
+                    <div id="account-balance-owner" class="account-balance"></div>
+                    <div class="eth">ETH</div>
+                    <div class="your-bal">YOUR BALANCE</div>
+                </div>
+
+                <div id="owner-container" class="proposal-content-container">
+                    <div id="image-container-owner" class="image-container"></div>
+                    <div class="image-info">
+                        <div class="proposal-label" class="info">PROPOSAL #n</div>
+                        <div class="info">SIZE: <span id="own-size"></span> KB</div>
+                        <div class="info">HEIGHT: <span id="own-height"></span> PX</div>
+                        <div class="info">WIDTH: <span id="own-width"></span> PX</div><br />
+                        <div class="info">VALUE:
+                            <form id="value-form">
+                                <input type="number" id="value-input" />
+                            </form>
+                            ETH
+                        </div>
+                        <button id="decline-prop" class="button-style">Decline</button>
+                        <button id="accept-prop" class="button-style">Accept</button>
+                    </div>
+                </div>
+                
+                <div class="side">
+                    <div id="waiting" class="prop-status">
+                        <div>Waiting for payment:</div>
+                    </div>
+
+                    <div id="new-p" class="prop-status">
+                        <div>New proposals:</div>
+                    </div>
+
+                    <div id="closed" class="prop-status">
+                        <div>Closed:</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="owner" class="button-style changeUI">Owner</button>
+        <button id="seller" class="button-style changeUI">Seller</button>
+        <script src="app.js"></script>
+    </body>
+</html>
